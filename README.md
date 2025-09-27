@@ -17,6 +17,11 @@ It follows a **Page Object Model (POM)** design for maintainability and readabil
 
 ---
 
+## 🎥 Demo Run
+
+![Test Run Demo](docs/Animation_UI.gif)
+
+
 ## 🛠️ Tech Stack
 
 - **Language**: Java 11+  
