@@ -14,7 +14,7 @@ public class DriverFactory {
         if (driver == null) {
             Map<String, String> mobileEmulation = new HashMap<>();
             // Stable built-in device
-            mobileEmulation.put("deviceName", "Pixel 2");
+            mobileEmulation.put("deviceName", "Galaxy S5");
 
             ChromeOptions options = new ChromeOptions();
             options.setExperimentalOption("mobileEmulation", mobileEmulation);
