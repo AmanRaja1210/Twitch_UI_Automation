@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+
+  pre_build:
+    commands:
+      - echo Cleaning project...
+      - mvn clean
+
+  build:
+    commands:
+      - echo Running Cucumber Tests...
+      - mvn test
+
+artifacts:
+  files:
+    - target/**/*
