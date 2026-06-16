@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="107.487" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Search and view a streamer" name="Search and view a streamer" time="107.302">
+<system-out><![CDATA[
+Given I open Twitch website.................................................passed
+When I click on browse......................................................passed
+And I input "StarCraft II"..................................................passed
+And I scroll down 2 times...................................................passed
+And I select one streamer...................................................passed
+And I select Data from DataTable............................................passed
+Then I take a screenshot after page is loaded...............................passed
+]]></system-out>
+</testcase>
+</testsuite>

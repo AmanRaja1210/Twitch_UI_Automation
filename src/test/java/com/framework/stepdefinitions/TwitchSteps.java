@@ -3,12 +3,15 @@ package com.framework.stepdefinitions;
 import com.framework.drivers.DriverFactory;
 import com.framework.utils.BaseHelper;
 import com.framework.utils.ModalHandler;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 public class TwitchSteps {
     private final WebDriver driver = DriverFactory.getDriver();
@@ -90,5 +93,18 @@ public class TwitchSteps {
         // Wait for the <video> or keep screenshotting the state
         helper.waitForAnyVisible(VIDEO_PLAYER, SEARCH_INPUT);
         helper.attachScreenshot("Final page state (video/search)");
+    }
+
+    @And("I select Data from DataTable")
+    public void iSelectDataFromDataTable(DataTable datatble) {
+
+        List<Map<String, String>> data= datatble.asMaps(String.class,String.class);
+        Map<String,String> data2= data.get(1);
+        String username= data2.get("username");
+        String password= data2.get("password");
+
+        System.out.println(username);
+        System.out.println(password);
+
     }
 }
